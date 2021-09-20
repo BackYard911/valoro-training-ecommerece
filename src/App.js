@@ -6,6 +6,7 @@ Route } from 'react-router-dom';
 import { MainHeader } from './components/MainHeader';
 import { MainContainer } from './components/MainContainer';
 import { UtilBox } from './components/UtilBox';
+import { ItemDetails } from './components/ItemDetails';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <MainContainer/>
         </Route>
         <Route path="/item">
-          
+          <ItemDetails/>
         </Route>
       </Switch>
 

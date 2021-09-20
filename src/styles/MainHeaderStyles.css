@@ -1,0 +1,24 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header::after{
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+}
+
+.header-options{
+    display: flex;
+    align-items: center;
+}
+
+.header-options > *{
+    margin-left: 20px;
+}

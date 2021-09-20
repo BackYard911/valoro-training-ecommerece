@@ -1,0 +1,28 @@
+.header-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.header-title h1{
+    font-size: 42px;
+    color: #DC9C9C;
+}
+
+.header-title p{
+    margin-left: 20px;
+    font-size: 38px;
+}
+
+@media screen and (max-width: 600px){
+    .header-title h1{
+        font-size: 36px;
+        color: #DC9C9C;
+    }
+    
+    .header-title p{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+}

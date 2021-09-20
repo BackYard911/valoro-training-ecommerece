@@ -1,0 +1,24 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.side-item .product-item .image-wrapper {
+  width: 100%;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,24 @@
+.img-util-box{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ECECEC;
+    position: relative;
+}
+
+.img-util-box img{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.text-util-box{
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #ECECEC;
+    
+}

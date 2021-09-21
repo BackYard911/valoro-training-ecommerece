@@ -1,12 +1,12 @@
 import '../styles/CardItemStyles.css'
-
+import {Link} from 'react-router-dom'
 function CardItem(props) {
     return (
         <div className="product-item">
 
             <div className="image-wrapper">
                 <div className="product-overlay">
-                    <a href="/item">Learn More</a>
+                    <Link to={`/item?id=${props.id}`}>Learn More</Link>
                 </div>
                 <img className="product-image" src={props.img} alt="img"></img>
             </div>

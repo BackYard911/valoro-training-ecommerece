@@ -5,12 +5,25 @@ import img2 from "../images/image-2.png"
 import img3 from "../images/image-3.png"
 import img4 from "../images/image-4.png"
 import img5 from "../images/image-5.png"
+import { useEffect, useState } from "react";
+import { getAllProducts } from "../services/product.service";
 
-function MainContainer(props){
+function MainContainer(props) {
 
-    return(
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const response = await getAllProducts()
+            setProducts(response.data.products);
+            console.log(response.data.products)
+        })()
+    }, [])
+
+    // console.log(products);
+    return (
         <main className="main-container">
-        <div className="items">
+            {/* <div className="items">
         <CardItem img={img1}
         name="cool pants"
         price="129"/>
@@ -29,11 +42,23 @@ function MainContainer(props){
         <CardItem img={img5}
         name="tinder dress"
         price="399"/>
-        </div>
-        
+    </div> */}
+                <div className="items">
+
+                    {products.map((product, index) => (
+                        <CardItem 
+                        key={product._id}
+                        id={product._id}
+                        img={product.img}
+                        name={product.title}
+                        price={product.price}/>
+            ))}
+                </div>
+            
+
 
         </main>
     )
 }
 
-export {MainContainer}
+export { MainContainer }

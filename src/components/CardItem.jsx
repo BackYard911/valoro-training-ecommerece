@@ -14,9 +14,7 @@ function CardItem(props) {
                 <p className="product-name">{props.name}</p>
                 <p className="product-price">{`$${props.price}`}</p>
             </div>
-
         </div>
     )
 }
-
 export { CardItem }

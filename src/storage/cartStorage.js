@@ -34,6 +34,7 @@ const removeFromCart = (id, del = false) => {
       break;
     }
   }
+  localStorage.setItem("cart", JSON.stringify(cart));
 };
 export const cartStorage = {
   getCart,

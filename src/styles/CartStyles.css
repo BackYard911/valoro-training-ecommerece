@@ -1,0 +1,14 @@
+.cart-body{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.cart-body button{
+    height: 150px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    font-size: 32px;
+    align-self: center;
+}

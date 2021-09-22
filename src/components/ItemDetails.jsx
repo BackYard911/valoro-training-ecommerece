@@ -14,7 +14,7 @@ function ItemDetails(props) {
     (async () => {
       const response = await getProductDetails(id);
       setItem(response.data.product);
-      console.log(response.data.product);
+      // console.log(response.data.product);
     })();
   }, [id]);
 

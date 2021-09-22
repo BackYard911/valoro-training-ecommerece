@@ -1,4 +1,5 @@
 import '../styles/UtilBoxStyles.css'
+import {Link} from 'react-router-dom'
 
 function UtilBox(props){
     let type;
@@ -15,7 +16,7 @@ function UtilBox(props){
         
         {props.img ?
         <img src={props.img} alt=""></img>
-        : `$${props.text}`}
+        : <Link to="/cart" >${props.text}$</Link>}
         
         </div>
     )

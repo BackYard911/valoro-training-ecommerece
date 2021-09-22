@@ -1,23 +1,16 @@
+import { useState } from "react";
+
 function CartBody(props) {
 
-    function decrement(){
-        let quant = document.getElementById('quantity')
-        let price = document.getElementById('price')
-        if(quant > 0){
-            quant = quant - 1 
-        }
-        else{
-            quant = 0
-        }
-        price = price * quant
-    }
-    
-    function increment(){
-        let quant = document.getElementById('quantity')
-        let price = document.getElementById('price')
-        quant = quant + 1
-        price = price * quant        
-    }
+  const [price,setPrice] = useState(props.price);
+  const [quantity,setQuantity] = useState(props.quantity);
+
+
+  function quantityChangeHandler(e){
+    setQuantity(e.target.value);
+    setPrice(e.target.value*(price/quantity));
+  }
+
 
   return (
     <tr>
@@ -28,12 +21,14 @@ function CartBody(props) {
         <p>{props.name}</p>
       </td>
       <td>
-          <button onClick="decrement()">-</button>
-          <input type="number" id="quantity" value="1"/>
-          <button onClick="increment()"></button>
+          <form>
+
+          <input type="number" onChange={quantityChangeHandler}  id="quantity" min={1} value={quantity}/>
+          </form>
+          
       </td>
       <td>
-        <p id='price'>{`$${props.price}`}</p>
+        <p id='price'>{`$${price}`}</p>
       </td>
     </tr>
   );

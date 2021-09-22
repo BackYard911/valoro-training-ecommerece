@@ -16,7 +16,7 @@ function MainContainer(props) {
         (async () => {
             const response = await getAllProducts()
             setProducts(response.data.products);
-            console.log(response.data.products)
+            // console.log(response.data.products)
         })()
     }, [])
 

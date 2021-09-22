@@ -64,6 +64,7 @@
     border: none;
     padding: 30px;
     font-size: 26px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px){

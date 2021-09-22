@@ -7,6 +7,7 @@ import { MainHeader } from './components/MainHeader';
 import { MainContainer } from './components/MainContainer';
 import { UtilBox } from './components/UtilBox';
 import { ItemDetails } from './components/ItemDetails';
+import {Cart} from './components/Cart'
 
 function App() {
   return (

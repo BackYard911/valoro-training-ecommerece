@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getAllProducts } from "../services/product.service";
 import CartBody from "./CartBody";
 
-function Cart(props) {
+export  function Cart(props) {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
@@ -39,4 +39,3 @@ function Cart(props) {
   );
 }
 
-export default Cart;

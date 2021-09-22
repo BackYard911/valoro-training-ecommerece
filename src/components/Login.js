@@ -1,10 +1,8 @@
 import classes from "../styles/Forms.module.css";
 import Card from "./ui/Card";
 import Layout from "./layout/Layout";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { login } from "../services/user.service";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MainContainer } from "./MainContainer";
 import { useHistory } from "react-router-dom";
 
 function Login(props) {

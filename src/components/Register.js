@@ -1,7 +1,7 @@
 import classes from "../styles/Forms.module.css";
 import Card from "./ui/Card";
 import Layout from "./layout/Layout";
-import { useEffect, useState} from "react";
+import { useState} from "react";
 import { register } from "../services/user.service";
 import { useHistory } from "react-router-dom";
 
@@ -69,7 +69,7 @@ function Register() {
           <div className={classes.actions}>
             <label htmlFor="notice">
               By registering you agreed to our{" "}
-              <a href="#">Terms and Conditions.</a>
+              <a target="_blank" rel="noreferrer" href="https://youtu.be/dQw4w9WgXcQ">Terms and Conditions.</a>
             </label>
           </div>
           <div className={classes.actions}>

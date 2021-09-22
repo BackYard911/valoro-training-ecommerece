@@ -1,6 +1,5 @@
 import "../styles/ItemDetailsStyles.css";
-import img4 from "../images/image-4.png";
-import { useLocation, useParams } from "react-router";
+import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
 import { getProductDetails } from "../services/product.service";
 import { cartStorage } from "../storage/cartStorage";
@@ -9,17 +8,12 @@ function ItemDetails(props) {
   const query = new URLSearchParams(useLocation().search);
   const id = query.get("id");
   const [item, setItem] = useState([]);
-//   let myCart = [];
   useEffect(() => {
     (async () => {
       const response = await getProductDetails(id);
       setItem(response.data.product);
-      // console.log(response.data.product);
     })();
   }, [id]);
-
-//   myCart = cartStorage.getCart();
-
   const addToCartHandler = () => {
     cartStorage.addToCart(id);
   };

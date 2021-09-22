@@ -1,0 +1,101 @@
+.form {
+  padding: 1rem;
+}
+h1 {
+  padding-left: 0.2rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  color: #000;
+}
+h3 {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  color: #000;
+}
+
+th, td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: auto;
+}
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th {
+	text-align: left;
+}
+
+input:focus ~ .floatinglabel,
+input:not(:focus):valid ~ .floatinglabel {
+  top: -18px;
+  bottom: 0px;
+  left: 0px;
+  
+  opacity: 1;
+}
+
+.heading {
+  font-weight: 300;
+  color: #000;
+}
+.control {
+  position: relative;
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+}
+label {
+  font-family: "IBM Plex Mono", monospace;
+  color: black;
+  font-weight: 300;
+  
+  margin-bottom: 3rem;
+}
+.floatinglabel {
+  position: absolute;
+  font-family: "IBM Plex Mono", monospace;
+  pointer-events: none;
+  font-weight: 100;
+  color: gray;
+  left: 2px;
+  top: 0px;
+  transition: 0.2s ease all;
+}
+
+.control input,
+.control textarea {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem;
+  width: 90%;
+}
+
+.actions {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.actions button {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: medium;
+  cursor: pointer;
+  background-color: #000;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: 1px solid #77002e;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}

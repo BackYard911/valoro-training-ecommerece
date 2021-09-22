@@ -43,8 +43,10 @@ function MainContainer(props) {
         name="tinder dress"
         price="399"/>
     </div> */}
-                <div className="items">
 
+    
+                <div className="items">
+                
                     {products.map((product, index) => (
                         <CardItem 
                         key={product._id}

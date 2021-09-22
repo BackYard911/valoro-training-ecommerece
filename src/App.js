@@ -20,6 +20,9 @@ function App() {
         <Route path="/item">
           <ItemDetails/>
         </Route>
+        <Route path="/Cart">
+          <Cart />
+        </Route>
       </Switch>
 
     </div>

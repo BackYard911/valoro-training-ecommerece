@@ -15,7 +15,7 @@ function MainContainer(props) {
     useEffect(() => {
         (async () => {
             const response = await getAllProducts()
-            setProducts(response.data.products);
+            setProducts(response.data.products);  
             console.log(response.data.products)
         })()
     }, [])
@@ -43,8 +43,10 @@ function MainContainer(props) {
         name="tinder dress"
         price="399"/>
     </div> */}
-                <div className="items">
 
+    
+                <div className="items">
+                
                     {products.map((product, index) => (
                         <CardItem 
                         key={product._id}
